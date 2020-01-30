@@ -36,6 +36,9 @@ cargo build --release
 //build and run package
 cargo run
 
+//run test cases
+cargo test
+
 //use compiler to check codes
 cargo check
 
