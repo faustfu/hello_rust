@@ -5,6 +5,7 @@
 // Crates: A tree of modules that produces a library or executable(binary).
 //         A crate is a binary(bin/*) or library(src/*). The crate root is a source file that
 //          the Rust compiler starts from and makes up the root module of your crate section.
+//         Only library crates expose functions that other crates can use.
 // Modules: The structure of a crate. Let you control the organization, scope, and privacy of paths.
 //          Files or folders in src folder are private modules. Module name => filename.
 //          The "use" keyword that brings a path into scope.

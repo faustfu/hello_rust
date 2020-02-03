@@ -40,7 +40,8 @@ extern crate autopilot;
 // mod const1;
 // mod auto1;
 // mod trait1;
-mod tt1;
+// mod tt1;
+mod tt2;
 
 //entry point, no parameters nor return values.
 fn main() {
@@ -133,5 +134,7 @@ fn main() {
 
     // trait1::trait1();
 
-    tt1::tt1();
+    // tt1::tt1();
+
+    tt2::tt2();
 }
