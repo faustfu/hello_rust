@@ -1,3 +1,11 @@
+use std::env; //use std::env::args_os to process invalid unicode strings.
+
 pub fn io2() {
-    println!("io2");
-  }
+  let args: Vec<String> = env::args().collect();
+
+  let query = &args[1];
+  let filename = &args[2];
+
+  println!("Searching for {}", query);
+  println!("In file {}", filename);
+}

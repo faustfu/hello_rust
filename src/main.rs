@@ -29,7 +29,7 @@ extern crate autopilot;
 // mod mo1;
 // mod fn1;
 // mod io1;
-// mod io2;
+mod io2;
 // mod cr1;
 // mod doc1;
 // mod own1;
@@ -41,7 +41,7 @@ extern crate autopilot;
 // mod auto1;
 // mod trait1;
 // mod tt1;
-mod tt2;
+// mod tt2;
 
 //entry point, no parameters nor return values.
 fn main() {
@@ -114,7 +114,7 @@ fn main() {
 
     // io1::io1();
 
-    // io2::io2();
+    io2::io2();
 
     // cr1::cr1();
 
@@ -136,5 +136,5 @@ fn main() {
 
     // tt1::tt1();
 
-    tt2::tt2();
+    // tt2::tt2();
 }
