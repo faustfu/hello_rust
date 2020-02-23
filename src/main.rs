@@ -41,7 +41,8 @@ extern crate autopilot;
 // mod const1;
 // mod auto1;
 // mod th1;
-mod th2;
+// mod th2;
+mod th3;
 // mod trait1;
 // mod tt1;
 // mod tt2;
@@ -139,7 +140,9 @@ fn main() {
 
     // th1::th1();
 
-    th2::th2();
+    // th2::th2();
+
+    th3::th3();
 
     // trait1::trait1();
 
