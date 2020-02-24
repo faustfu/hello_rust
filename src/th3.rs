@@ -1,3 +1,5 @@
+// 1. Clone transmitters to get multiple producers. 
+
 use std::sync::mpsc;
 use std::thread;
 use std::time::Duration;
