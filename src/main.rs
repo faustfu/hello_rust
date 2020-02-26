@@ -37,6 +37,7 @@ extern crate autopilot;
 // mod own2;
 // mod own3;
 // mod own4;
+mod pointer1;
 // mod cmp1;
 // mod const1;
 // mod auto1;
@@ -44,7 +45,7 @@ extern crate autopilot;
 // mod th2;
 // mod th3;
 // mod th4;
-mod th5;
+// mod th5;
 // mod trait1;
 // mod tt1;
 // mod tt2;
@@ -136,6 +137,8 @@ fn main() {
 
     // own4::own4();
 
+    pointer1::pointer1();
+
     // cmp1::cmp1();
 
     // const1::const1();
@@ -148,7 +151,7 @@ fn main() {
 
     // th4::th4();
 
-    th5::th5();
+    // th5::th5();
 
     // trait1::trait1();
 
