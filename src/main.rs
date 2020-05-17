@@ -7,12 +7,12 @@ extern crate autopilot;
 /// 4. macro is a kind of pseudo code for compiler to generate some code at compile time.
 /// 5. ";" indicate the end of a statement. Every statements need a semicolon if it is not a final return statement in a block;
 
+mod objects;
 // mod sh;
 // mod clo1;
 // mod conditions;
 // mod enum1;
 // mod option1;
-// mod ar1;
 // mod err1;
 // mod err2;
 // mod err3;
@@ -37,7 +37,7 @@ extern crate autopilot;
 // mod own2;
 // mod own3;
 // mod own4;
-mod pointer1;
+// mod pointer1;
 // mod cmp1;
 // mod const1;
 // mod auto1;
@@ -79,7 +79,7 @@ fn main() {
 
     // option1::op1();
 
-    // ar1::ar1();
+    objects::ar1::ar1();
 
     // err1::err1();
 
@@ -137,7 +137,7 @@ fn main() {
 
     // own4::own4();
 
-    pointer1::pointer1();
+    // pointer1::pointer1();
 
     // cmp1::cmp1();
 
