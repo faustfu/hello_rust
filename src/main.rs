@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 extern crate autopilot;
 // use std::mem;
 
@@ -7,7 +9,8 @@ extern crate autopilot;
 /// 4. macro is a kind of pseudo code for compiler to generate some code at compile time.
 /// 5. ";" indicate the end of a statement. Every statements need a semicolon if it is not a final return statement in a block;
 
-mod objects;
+// mod objects;
+mod concurrencies;
 // mod sh;
 // mod clo1;
 // mod conditions;
@@ -79,7 +82,7 @@ fn main() {
 
     // option1::op1();
 
-    objects::ar1::ar1();
+    // objects::ar1::ar1();
 
     // err1::err1();
 
@@ -143,15 +146,15 @@ fn main() {
 
     // const1::const1();
 
-    // th1::th1();
+    // concurrencies::th1::th1();
 
-    // th2::th2();
+    // concurrencies::th2::th2();
 
-    // th3::th3();
+    // concurrencies::th3::th3();
 
-    // th4::th4();
+    // concurrencies::th4::th4();
 
-    // th5::th5();
+    concurrencies::th5::th5();
 
     // trait1::trait1();
 

@@ -8,7 +8,7 @@ pub fn th5() {
     let mut handles = vec![];
 
     for _ in 0..10 {
-        let counter = Arc::clone(&counter);
+        let counter = Arc::clone(&counter); // clone the counter for every handles.
         let handle = thread::spawn(move || {
             let mut num = counter.lock().unwrap();
 
@@ -18,7 +18,7 @@ pub fn th5() {
     }
 
     for handle in handles {
-        handle.join().unwrap();
+        handle.join().unwrap(); // wait for every handles to do their jobs.
     }
 
     println!("Result: {}", *counter.lock().unwrap());

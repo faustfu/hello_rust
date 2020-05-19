@@ -9,19 +9,19 @@ use std::time::Duration;
 pub fn th1() {
     let handle1 = thread::spawn(|| { // it will spawn another thread to run the closure.
         for i in 1..10 {
-            println!("hi number {} from the spawned thread 1!", i);
+            println!("Thread 1) hi number {}!", i);
             thread::sleep(Duration::from_millis(1));
         }
     });
 
     let v = vec![1, 2, 3];
     let handle2 = thread::spawn(move || {
-        println!("Here's a vector: {:?} in the spawned thread 2!", v);
+        println!("Thread 2) Here's a vector: {:?}!", v);
         thread::sleep(Duration::from_millis(1));
     });
 
     for i in 1..5 {
-        println!("hi number {} from the main thread!", i);
+        println!("Thread main) hi number {}!", i);
         thread::sleep(Duration::from_millis(1));
     }
 

@@ -10,10 +10,10 @@ pub fn th3() {
     let tx1 = mpsc::Sender::clone(&tx);
     thread::spawn(move || {
         let vals = vec![
-            String::from("hi"),
-            String::from("from"),
-            String::from("the"),
-            String::from("thread"),
+            String::from("1)hi"),
+            String::from("1)from"),
+            String::from("1)the"),
+            String::from("1)thread"),
         ];
         for val in vals {
             tx1.send(val).unwrap();
@@ -23,10 +23,10 @@ pub fn th3() {
 
     thread::spawn(move || {
         let vals = vec![
-            String::from("more"),
-            String::from("messages"),
-            String::from("for"),
-            String::from("you"),
+            String::from("2)more"),
+            String::from("2)messages"),
+            String::from("2)for"),
+            String::from("2)you"),
         ];
         for val in vals {
             tx.send(val).unwrap();
@@ -38,4 +38,6 @@ pub fn th3() {
         // Use for loop to block the flow and receive values.
         println!("Got: {}", received);
     }
+
+    // The main thread will wait for rx loop completed.
 }
