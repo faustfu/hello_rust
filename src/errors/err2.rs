@@ -53,7 +53,7 @@ fn read_username_from_file2() -> Result<String, io::Error> {
 fn read_username_from_file3() -> Result<String, io::Error> {
   let mut s = String::new();
 
-  File::open("hello3.txt")?.read_to_string(&mut s)?;
+  File::open("hello3.txt")?.read_to_string(&mut s)?; // shorten the statements
 
   Ok(s)
 }

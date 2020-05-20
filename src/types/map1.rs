@@ -25,7 +25,9 @@ pub fn map1() {
   let teams = vec![String::from("Blue"), String::from("Yellow")];
   let initial_scores = vec![10, 50];
 
-  let histories: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect(); // initial a map with default pairs by zip method.
+  // step 1: zip two iterators into a iterator pair.
+  // step 2: convert a iterator pair to be a map.
+  let histories: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
 
   println!("map3 is {:?}", histories);
 
@@ -49,7 +51,7 @@ pub fn map1() {
 
   println!("map4 is {:?}", scores);
 
-  // case 7(insert if not exists)
+  // case 7(get the item by key and insert the key with its value if not exists)
   scores.entry(String::from("Green")).or_insert(33); // method:entry will return a Entry.
   scores.entry(String::from("Brown")).or_insert(33); // method:or_insert will insert if not exists or return a mutable reference for the value.
 

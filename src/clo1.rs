@@ -1,5 +1,5 @@
 
-// How a value is captured will imply the same set of borrow rules we’re used to in Rust.
+// How a value is captured by a closure will imply the same set of borrow rules we’re used to in Rust.
 // 1. If by reference, then other references can live concurrently with the closure.
 // 2. If by mutable reference, then as long as the closure is alive, no other references to the values can exist.
 //    However, once the closure is dropped, other references can exist again.
@@ -23,29 +23,31 @@ fn inc(i:i32) -> i32 {
 pub fn clo1() {
   // case 1(copy)
   let i:i32 = inc(1);
-  let clo1 = |j:i32| j + i;
+  let clo1 = |j:i32| j + i; // i is fixed to 2 in the closure.
   println!("i is {}", i);
   println!("clo(i) is {}", clo1(2));
+  println!("clo(i) is {}", clo1(5));
 
   // case 2(move ownership by value)
-  let x = String::from("Alice");
+  let x = String::from("Alice 1");
   let clo2 = || {
     let y = x;
     println!("Hello, {}", y);
   };
-  clo2(); // Cannot use it again.
+  clo2();
+  // clo2();  // Cannot use it again.
 
   // case 3(by reference)
-  let x = String::from("Alice");
+  let x = String::from("Alice 2");
   let clo3 = || {
     let y = &x;
     println!("Hello, {}", y);
   };
   clo3();
-  clo3();
+  clo3(); // it is valid to call it again.
 
   // case 4(move ownership by using "move" keyword)
-  let name = String::from("Alice");
+  let name = String::from("Alice 3");
   let _ = move || println!("Hello, {}", name);
   // println!("Using name from main: {}", name); // invalid access here!
 }

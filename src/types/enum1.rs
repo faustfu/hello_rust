@@ -2,8 +2,6 @@
 // 2. Each variant's inner types could be same or different and their outer types are same => the identifier.
 // 3. Enum could define methods like struct.
 
-#![allow(dead_code)]
-
 #[derive(Debug)]
 enum Color {
   Red,
@@ -23,10 +21,10 @@ enum IpAddr {
   V4(String),
   V6(String),
 }
-
+// add a method for the enum.
 impl IpAddr {
   fn connect(&self) {
-    println!("connect to {:?}", self;
+    println!("connect to {:?}", self);
   }
 }
 

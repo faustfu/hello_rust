@@ -9,26 +9,20 @@ extern crate autopilot;
 /// 4. macro is a kind of pseudo code for compiler to generate some code at compile time.
 /// 5. ";" indicate the end of a statement. Every statements need a semicolon if it is not a final return statement in a block;
 
-// mod objects;
+mod types;
 mod concurrencies;
+mod variables;
+mod errors;
+mod flows;
 // mod sh;
-// mod clo1;
-// mod conditions;
-// mod enum1;
+mod clo1;
 // mod option1;
-// mod err1;
-// mod err2;
-// mod err3;
-// mod gen1;
-// mod gen2;
 // mod vec1;
 // mod sl1;
 // mod str1;
 // mod str2;
-// mod var1;
 // mod lif1;
 // mod lif2;
-// mod map1;
 // mod mo1;
 // mod fn1;
 // mod fn2;
@@ -41,14 +35,7 @@ mod concurrencies;
 // mod own3;
 // mod own4;
 // mod pointer1;
-// mod cmp1;
-// mod const1;
 // mod auto1;
-// mod th1;
-// mod th2;
-// mod th3;
-// mod th4;
-// mod th5;
 // mod trait1;
 // mod tt1;
 // mod tt2;
@@ -72,27 +59,33 @@ fn main() {
 
     // conditions::con1();
 
-    // conditions::while1();
+    // flows::cmp1::cmp1();
 
-    // conditions::for1();
+    // flows::cmp2::cmp2();
 
-    // conditions::match1();
+    // flows::loop1::while1();
 
-    // enum1::enums();
+    // flows::loop1::for1();
+
+    // flows::match1::match1();
 
     // option1::op1();
 
-    // objects::ar1::ar1();
+    // types::ar1::ar1();
 
-    // err1::err1();
+    // types::enum1::enums();
 
-    // err2::err2();
+    // types::it1::it1();
 
-    // err3::err3();
+    // errors::err1::err1();
 
-    // gen1::gen1();
+    // errors::err2::err2();
 
-    // gen2::gen2();
+    // errors::err3::err3();
+
+    // types::gen1::gen1();
+
+    // types::gen2::gen2();
 
     // vec1::vec1();
 
@@ -101,8 +94,6 @@ fn main() {
     // str1::str1();
 
     // str2::str2();
-
-    // var1::var1();
 
     // lif1::lif1();
 
@@ -116,7 +107,7 @@ fn main() {
 
     // lif2::case1();
 
-    // map1::map1();
+    types::map1::map1();
 
     // mo1::mo1();
 
@@ -142,9 +133,9 @@ fn main() {
 
     // pointer1::pointer1();
 
-    // cmp1::cmp1();
+    // variables::const1::const1();
 
-    // const1::const1();
+    // variables::var1::var1();
 
     // concurrencies::th1::th1();
 
@@ -154,7 +145,7 @@ fn main() {
 
     // concurrencies::th4::th4();
 
-    concurrencies::th5::th5();
+    // concurrencies::th5::th5();
 
     // trait1::trait1();
 

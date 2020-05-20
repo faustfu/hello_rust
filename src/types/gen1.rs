@@ -17,6 +17,7 @@ pub fn gen1() {
   // case 2(use functions to reduce duplicated codes)
   let number_list = vec![102, 34, 6000, 89, 54, 2, 43, 8];
 
+  // pass a vector as an array.
   let result = biggest(&number_list);
   println!("The largest number is {}", result);
 
@@ -80,10 +81,10 @@ fn largest_char(list: &[char]) -> char {
 }
 
 fn bigg<T:Copy + PartialOrd>(list: &[T]) -> T {
-  let mut largest = list[0];
+  let mut largest = list[0]; // Copy
 
   for &item in list.iter() {
-      if item > largest {
+      if item > largest { // PartialOrd
           largest = item;
       }
   }

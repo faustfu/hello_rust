@@ -12,6 +12,7 @@ impl<T> Point1<T> {
   }
 }
 
+// add a specified method for a specified type
 impl Point1<f32> {
   fn distance_from_origin(&self) -> f32 {
       (self.x.powi(2) + self.y.powi(2)).sqrt()
@@ -32,6 +33,7 @@ impl<T, U> Point2<T, U> {
       }
   }
 }
+
 pub fn gen2() {
   // case 1(use a generic type in structs)
   let integer = Point1 { x: 5, y: 10 };

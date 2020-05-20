@@ -35,7 +35,7 @@ pub fn add(a:i32,b:i32) -> i32 {
 pub fn var1() {
   let a = "asd";
   let b = false;
-  let c = '嗨';
+  let c = '嗨'; // use single quota to declare a character.
 
   p_str(a);
   p_bool(b);
