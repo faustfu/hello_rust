@@ -1,9 +1,9 @@
-// 1. Vectors use "usize" as index type and the index starts at 0.
+// 1. Vectors use "usize" as index type and the index starts from 0.
 // 2. Vectors keep same type values into heap and could use push or pop methods as a stack to change size.
 // 3. A vector and its values will be dropped as leaving the scope.
-// 4. length of vector is the number of current elements in the vector.
+// 4. Length of vector is the number of current elements in the vector.
 //    access method: <vector>.len()
-// 5. capacity of vector is the number of current space in the vector.
+// 5. Capacity of vector is the number of current space in the vector.
 //    access method: <vector>.capacity()
 //    initial method: Vec::with_capacity(<size>)
 
@@ -42,18 +42,22 @@ pub fn vec1() {
   for x in &mut a {
     *x += 2
   }
+  println!("a is {:?}", a);
 
+  // push a element into the vector
   a.push(8);
+  println!("a is {:?}", a);
 
+  // take a iterator with its ownership to extend the vector
   a.extend([1, 2, 3].iter().cloned());
+  println!("a is {:?}", a);
 
   for i in a.iter() {
     println!("{}", i);
   }
 
   a.pop(); //pop() will return Option
-
-  println!("{:?}", a);
+  println!("a is {:?}", a);
 
   // move all values out of the vector
   while let Some(x) = a.pop() {

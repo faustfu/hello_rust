@@ -16,8 +16,6 @@ mod errors;
 mod flows;
 // mod sh;
 mod clo1;
-// mod option1;
-// mod vec1;
 // mod sl1;
 // mod str1;
 // mod str2;
@@ -59,6 +57,12 @@ fn main() {
 
     // conditions::con1();
 
+    // errors::err1::err1();
+
+    // errors::err2::err2();
+
+    // errors::err3::err3();
+
     // flows::cmp1::cmp1();
 
     // flows::cmp2::cmp2();
@@ -69,7 +73,7 @@ fn main() {
 
     // flows::match1::match1();
 
-    // option1::op1();
+    flows::pat1::pat1();
 
     // types::ar1::ar1();
 
@@ -77,17 +81,15 @@ fn main() {
 
     // types::it1::it1();
 
-    // errors::err1::err1();
-
-    // errors::err2::err2();
-
-    // errors::err3::err3();
-
     // types::gen1::gen1();
 
     // types::gen2::gen2();
 
-    // vec1::vec1();
+    // types::map1::map1();
+
+    // types::option1::op1();
+
+    // types::vec1::vec1();
 
     // sl1::slice1();
 
@@ -106,8 +108,6 @@ fn main() {
     // lif1::lif5();
 
     // lif2::case1();
-
-    types::map1::map1();
 
     // mo1::mo1();
 

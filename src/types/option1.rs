@@ -18,5 +18,6 @@ pub fn op1() {
     None => println!("{} / {} has errors", x, y)
   }
 
+  // parsing is ok, then "if" block will be executed. 
   if let Some(z) = result { println!("z = {}", z) };
 }
