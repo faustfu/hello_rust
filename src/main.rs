@@ -88,7 +88,7 @@ fn main() {
 
     // types::str2::str2();
 
-    types::tu1::tu1();
+    // types::tu1::tu1();
 
     // types::vec1::vec1();
 
@@ -108,9 +108,11 @@ fn main() {
 
     // functions::clo1::clo1();
 
-    // functions::fn1::fn1();
+    // functions::clo2::clo2();
 
-    // functions::fn2::fn2();
+    functions::clo3::clo3();
+
+    // functions::fn1::fn1();
 
     // io1::io1();
 

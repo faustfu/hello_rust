@@ -7,7 +7,7 @@ use std::time::Duration;
 pub fn th3() {
     let (tx, rx) = mpsc::channel();
 
-    let tx1 = mpsc::Sender::clone(&tx);
+    let tx1 = mpsc::Sender::clone(&tx); // tx and tx1 will transmit values to rx.
     thread::spawn(move || {
         let vals = vec![
             String::from("1)hi"),
@@ -17,7 +17,7 @@ pub fn th3() {
         ];
         for val in vals {
             tx1.send(val).unwrap();
-            thread::sleep(Duration::from_secs(1));
+            thread::sleep(Duration::from_secs(2));
         }
     });
 
@@ -39,5 +39,5 @@ pub fn th3() {
         println!("Got: {}", received);
     }
 
-    // The main thread will wait for rx loop completed.
+    // The main thread will wait for rx is closed.
 }

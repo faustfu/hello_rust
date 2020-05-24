@@ -1,7 +1,7 @@
 // 1. Rust uses system thread by default.
 // 2. The new thread will be stopped when the main thread ends.
 // 3. thread::sleep will stop its executio and allow a different thread to run.
-// 4. The spawned is lefttime is uncertain. So the spawned has to keep the ownership of used variables.
+// 4. The spawned's lefttime is uncertain. So the spawned has to keep the ownership of used variables.
 
 use std::thread;
 use std::time::Duration;
