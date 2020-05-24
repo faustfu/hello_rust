@@ -85,7 +85,7 @@ pub fn pat1() {
   }
 
   // case 5(identifier patterns)
-  let mut variable = 10; // Bind a variable with the value.
+  let mut variable = 10; // Bind/declare a variable with the value.
   variable += 5;
   println!("New variable is {}", variable);
 

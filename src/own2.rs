@@ -16,7 +16,7 @@ pub fn own2() {
 
   let b = &a; //1. borrow of `a` occurs here
 
-  bar(a); //Cause 1&2, cannot move out of `a` because it is borrowed
+  // bar(a); //Cause 1&2, cannot move out of `a` because it is borrowed
 
   println!("b is {}", b.0); //2. borrow of `a` is accessed here
 

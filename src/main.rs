@@ -9,29 +9,24 @@ extern crate autopilot;
 /// 4. macro is a kind of pseudo code for compiler to generate some code at compile time.
 /// 5. ";" indicate the end of a statement. Every statements need a semicolon if it is not a final return statement in a block;
 
+mod functions;
 mod types;
 mod concurrencies;
 mod variables;
 mod errors;
 mod flows;
-// mod sh;
-mod clo1;
-// mod sl1;
-// mod str1;
-// mod str2;
-// mod lif1;
-// mod lif2;
+mod mods;
+mod lif1;
+mod lif2;
 // mod mo1;
-// mod fn1;
-// mod fn2;
 // mod io1;
 // mod io2;
 // mod cr1;
 // mod doc1;
-// mod own1;
-// mod own2;
-// mod own3;
-// mod own4;
+mod own1;
+mod own2;
+mod own3;
+mod own4;
 // mod pointer1;
 // mod auto1;
 // mod trait1;
@@ -51,10 +46,6 @@ fn main() {
     // println!("a = {}, size of a = {}", a, mem::size_of_val(&a));
     // println!("b = {}, size of b = {}", b, mem::size_of_val(&b));
 
-    // sh::heap();
-
-    // clo1::clo1();
-
     // conditions::con1();
 
     // errors::err1::err1();
@@ -73,7 +64,7 @@ fn main() {
 
     // flows::match1::match1();
 
-    flows::pat1::pat1();
+    // flows::pat1::pat1();
 
     // types::ar1::ar1();
 
@@ -89,13 +80,17 @@ fn main() {
 
     // types::option1::op1();
 
+    // types::sh::heap();
+
+    // types::sl1::slice1();
+
+    // types::str1::str1();
+
+    // types::str2::str2();
+
+    types::tu1::tu1();
+
     // types::vec1::vec1();
-
-    // sl1::slice1();
-
-    // str1::str1();
-
-    // str2::str2();
 
     // lif1::lif1();
 
@@ -109,11 +104,13 @@ fn main() {
 
     // lif2::case1();
 
-    // mo1::mo1();
+    // mods::mo1::mo1();
 
-    // fn1::fn1();
+    // functions::clo1::clo1();
 
-    // fn2::fn2();
+    // functions::fn1::fn1();
+
+    // functions::fn2::fn2();
 
     // io1::io1();
 

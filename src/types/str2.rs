@@ -1,7 +1,7 @@
 use rand::prelude::*;
 
 pub fn str2() {
-  let s1 = b"abc";
+  let s1 = b"abc"; // convert a str to be a byte slice.
 
   for i in s1.iter() {
     println!("s1 = {}", i);

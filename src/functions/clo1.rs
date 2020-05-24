@@ -16,6 +16,7 @@
 //        which automatically implies FnOnce as well.
 //    c. Otherwise, a closure is a Fn, which automatically implies both FnMut and FnOnce.
 
+// normal functions, returning values depend on parameters.
 fn inc(i:i32) -> i32 {
   i + 1
 }
@@ -23,28 +24,33 @@ fn inc(i:i32) -> i32 {
 pub fn clo1() {
   // case 1(copy)
   let i:i32 = inc(1);
+
+  // closures, returning values depend on parameters and context.
   let clo1 = |j:i32| j + i; // i is fixed to 2 in the closure.
-  println!("i is {}", i);
-  println!("clo(i) is {}", clo1(2));
-  println!("clo(i) is {}", clo1(5));
+
+  println!("inc(1) is {}", i);
+  println!("clo(2) is {}", clo1(2));
+  println!("clo(5) is {}", clo1(5));
 
   // case 2(move ownership by value)
   let x = String::from("Alice 1");
   let clo2 = || {
-    let y = x;
+    let y = x; // y is binding the value.
     println!("Hello, {}", y);
+    // the lifetime of ownership is ended here.
   };
   clo2();
-  // clo2();  // Cannot use it again.
+  // clo2();  // Cannot use x again.
 
   // case 3(by reference)
   let x = String::from("Alice 2");
   let clo3 = || {
-    let y = &x;
+    let y = &x; // immutable borrow
     println!("Hello, {}", y);
+    // the lifetime of borrowed reference is ended here.
   };
   clo3();
-  clo3(); // it is valid to call it again.
+  clo3(); // it is valid to use x again.
 
   // case 4(move ownership by using "move" keyword)
   let name = String::from("Alice 3");

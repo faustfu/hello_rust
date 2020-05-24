@@ -28,7 +28,7 @@ pub fn str1() {
   let mut a = 'a' as u8;
   while a <= ('z' as u8) {
     letters.push(a as char); //append a char
-    letters.push_str(","); //append a &str
+    letters.push_str(","); //append a str
     letters += " "; //same as push_str() to concatenate text. But it will consume self ownership!
     a += 1;
   }
@@ -55,7 +55,7 @@ pub fn str1() {
   let mut a1 = String::from("foo");
   let mut a2 = "bar";
   a1.push_str(a2);
-  a2 = "wo";
+  a2 = "wo"; // assign a new str reference
   println!("a1 is {}", a1);
   println!("a2 is {}", a2);
 }

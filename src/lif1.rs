@@ -1,6 +1,6 @@
 // 1. Every reference in Rust has a lifetime, which is the scope for which that reference is valid.
 // 2. The main aim of lifetimes is to prevent dangling references.(lifetime overlaps or is out of scope as accessing)
-// 3. A lifetime could be anonymous or named by starting with an apostrophe "'" combining a lexical label after the & of a reference.
+// 3. A lifetime could be anonymous or named by starting with an apostrophe "'" combining a lexical label after the "&" of a reference.
 // 4. Function parameter lifetimes could be generic likes parameter types.
 // 5. The compiler uses three rules to figure out what lifetimes references have when there aren’t explicit annotations.
 //   a. Each parameter that is a reference gets its own lifetime parameter.
@@ -16,7 +16,7 @@ use std::fmt::Display;
 //   {                     //          |
 //     let x = 5;          // -+-- 'b  |
 //     r = &x;             //  |       | //(X)The borrow checker runs here and is failed.
-//   }                     // -+       |
+//   }                     // -+       | //   Because r is binding with 'b and 'b is invalid outside of the block.
 //                         //          |
 //   println!("r: {}", r); //          |
 // }                       // ---------+
@@ -30,15 +30,15 @@ use std::fmt::Display;
 //                         // --+       |
 // }                       // ----------+
 
-// pub fn lif3() {
-//   let string1 = String::from("long string is long");
+pub fn lif3() {
+  let string1 = String::from("long string is long");
 
-//   {
-//     let string2 = String::from("xyz");
-//     let result = longest(string1.as_str(), string2.as_str());
-//     println!("The longest string is {}", result);
-//   }
-// }
+  {
+    let string2 = String::from("xyz");
+    let result = longest(string1.as_str(), string2.as_str());
+    println!("The longest string is {}", result);
+  }
+}
 
 // // case 1
 // pub fn lif4() {
@@ -50,15 +50,16 @@ use std::fmt::Display;
 //   }
 //   println!("The longest string is {}", result);
 // }
-// // The lifetime of the reference returned by the longest function is the same as
-// //  the smaller of the lifetimes of the references passed in.
-// fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-//   if x.len() > y.len() {
-//     x
-//   } else {
-//     y
-//   }
-// }
+
+// The lifetime of the reference returned by the longest function is the same as
+//  the smaller of the lifetimes of the references passed in.
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+  if x.len() > y.len() {
+    x
+  } else {
+    y
+  }
+}
 
 // case 2
 pub fn lif5() {

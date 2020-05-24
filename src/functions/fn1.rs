@@ -3,7 +3,7 @@
 // 3. Rust is an expression-based language. (Statement doesn't return value, ex: variable and functoin declaration...)
 // 4. Expressions do not include ending semicolons.
 //    If you add a semicolon to the end of an expression, you turn it into a statement.
-// 5. use "return" statement in a function could turn a value.
+// 5. use "return" statement in a function could return a value.
 use std::collections::HashMap;
 
 // //normal
@@ -19,7 +19,7 @@ use std::collections::HashMap;
 //   }
 // }
 
-//dynamic
+// memorize
 fn fib(n:u64, map:&mut HashMap<u64, u64>) -> u64 {
   match n {
     0 | 1 => 1,

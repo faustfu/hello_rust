@@ -6,17 +6,26 @@
 //    b. elided output lifetime is decided by input lifetime.
 //       If there is no any input lifetime or multiple input lifetime, elided output lifetime is illegal.
 //    c. if the function is a object's method, elided output lifetime is same with the object.
+#![allow(unused_mut, unused_variables)]
+
+#[derive(Debug)]
 struct Foo<'a> {
     x: &'a i32,
 }
 
+impl<'a> Drop for Foo<'a> {
+    fn drop(&mut self) {
+        println!("Dropping a Foo: {:?}", self);
+    }
+}
+  
 pub fn own4() {
-    let x;                    // -+ x goes into scope
+    let mut x = 4;                    // -+ x goes into scope
                               //  |
     {                         //  |
         let y = &5;           // ---+ y goes into scope
         let f = Foo { x: y }; // ---+ f goes into scope
-        x = &f.x;             //  | | error here:borrowed value `f.x` does not live long enough
+        // x = &f.x;          //  | | error here:borrowed value `f.x` does not live long enough
     }                         // ---+ f and y go out of scope
                               //  |
     println!("{}", x);        //  |
