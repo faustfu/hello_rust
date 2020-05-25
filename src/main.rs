@@ -23,6 +23,8 @@ mod lif2;
 // mod io2;
 // mod cr1;
 // mod doc1;
+mod oo1;
+mod oo2;
 mod own1;
 mod own2;
 mod own3;
@@ -80,6 +82,8 @@ fn main() {
 
     // types::option1::op1();
 
+    // types::pointer1::pointer1();
+
     // types::sh::heap();
 
     // types::sl1::slice1();
@@ -116,7 +120,7 @@ fn main() {
 
     // functions::clo5::clo5();
 
-    functions::clo6::clo6();
+    // functions::clo6::clo6();
 
     // functions::fn1::fn1();
 
@@ -128,6 +132,10 @@ fn main() {
 
     // doc1::doc1();
 
+    // oo1::oo1();
+
+    oo2::oo2();
+
     // own1::own1();
 
     // own2::own2();
@@ -135,8 +143,6 @@ fn main() {
     // own3::own3();
 
     // own4::own4();
-
-    // pointer1::pointer1();
 
     // variables::const1::const1();
 

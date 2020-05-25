@@ -2,6 +2,7 @@
 // 2. We can use trait bounds to specify that a generic can be any type that has certain behavior.
 // 3. Traits may be public or private, but methods in traits is public by default.
 // 4. The orphan rule : we can implement a trait on a type only if either the trait or the type is local to our crate.
+// 5. A generic type parameter can only be substituted with one concrete type at a time.(zero-cost abstraction)
 
 trait Summary {
   fn summarize(&self) -> String; // declarations
@@ -44,12 +45,14 @@ impl Summary for Tweet {
   }
 }
 
+// declare a generic function bounded with a trait.
 fn notify<T: Summary>(item: &T) {
-  println!("Breaking news! {}", item.summarize());
+  println!("Breaking news! {}", item.summarize()); // use trait methods
 }
 
 use std::fmt::Debug;
 
+// declare a generic function bounded with two traits.
 fn print<T: Summary + Debug>(item: &T) {
   println!("Breaking news! {:?}", item);
 }
