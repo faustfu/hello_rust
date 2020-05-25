@@ -110,7 +110,13 @@ fn main() {
 
     // functions::clo2::clo2();
 
-    functions::clo3::clo3();
+    // functions::clo3::clo3();
+
+    // functions::clo4::clo4();
+
+    // functions::clo5::clo5();
+
+    functions::clo6::clo6();
 
     // functions::fn1::fn1();
 
