@@ -4,6 +4,7 @@
 //      a. The return type isn’t Self.
 //      b. There are no generic type parameters.
 
+// public interface
 pub trait Draw {
   fn draw(&self);
 }
@@ -32,6 +33,7 @@ impl Draw for Button {
   }
 }
 
+// demo usage of the trait
 struct SelectBox {
   width: u32,
   height: u32,

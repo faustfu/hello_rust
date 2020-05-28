@@ -25,11 +25,12 @@ mod lif2;
 // mod doc1;
 mod oo1;
 mod oo2;
+mod oo3;
+mod oo4;
 mod own1;
 mod own2;
 mod own3;
 mod own4;
-// mod pointer1;
 // mod auto1;
 // mod trait1;
 // mod tt1;
@@ -84,6 +85,8 @@ fn main() {
 
     // types::pointer1::pointer1();
 
+    types::pointer2::pointer2();
+
     // types::sh::heap();
 
     // types::sl1::slice1();
@@ -134,7 +137,11 @@ fn main() {
 
     // oo1::oo1();
 
-    oo2::oo2();
+    // oo2::oo2();
+
+    // oo3::oo3();
+
+    // oo4::oo4();
 
     // own1::own1();
 
