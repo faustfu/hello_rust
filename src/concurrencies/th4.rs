@@ -2,7 +2,7 @@
 
 use std::sync::Mutex;
 
-pub fn th4() {
+pub fn run() {
     let m = Mutex::new(5);
 
     println!("m = {:?}", m);

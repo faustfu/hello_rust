@@ -3,7 +3,7 @@
 use std::sync::{Mutex, Arc};
 use std::thread;
 
-pub fn th5() {
+pub fn run() {
     let counter = Arc::new(Mutex::new(0)); // counter is immutable, but mutex is not.
     let mut handles = vec![];
 

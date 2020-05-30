@@ -6,7 +6,7 @@
 use std::thread;
 use std::time::Duration;
 
-pub fn th1() {
+pub fn run() {
     let handle1 = thread::spawn(|| { // it will spawn another thread to run the closure.
         for i in 1..10 {
             println!("Thread 1) hi number {}!", i);
