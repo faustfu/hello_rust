@@ -40,7 +40,7 @@ fn origin() -> Point {
   }
 }
 
-pub fn heap() {
+pub fn run() {
   let p1 = origin();
   let p2 = Box::new(origin());
   let p3 = Point {

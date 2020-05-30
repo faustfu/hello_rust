@@ -32,7 +32,7 @@ pub fn add(a:i32,b:i32) -> i32 {
   return a + b;
 }
 
-pub fn var1() {
+pub fn run() {
   let a = "asd";
   let b = false;
   let c = '嗨'; // use single quota to declare a character.

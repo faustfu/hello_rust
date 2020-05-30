@@ -14,7 +14,7 @@ enum SpreadsheetCell {
   Text(String),
 }
 
-pub fn vec1() {
+pub fn run() {
   let mut a = Vec::new(); // Vectors are implemented using generics. It may be assigned a type as initialization.
   let b = vec![1, 2, 3]; // vector macro for creating a vector with initial values.
 

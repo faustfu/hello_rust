@@ -13,7 +13,7 @@ fn change_array_by_slice(input:&mut[i32]) {
   input[1] = 6;
 }
 
-pub fn slice1() {
+pub fn run() {
   let mut a = [1,2,3,4,5];
   
   show_slice(&a[1..3]);

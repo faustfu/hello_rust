@@ -6,7 +6,7 @@
 // 2. Choosing between match and if let depends on what you’re doing in your particular situation and
 //     whether gaining conciseness is an appropriate trade-off for losing exhaustive checking.
 
-pub fn op1() {
+pub fn run() {
   let x = 3.0;
   let y = 2.0;
   let result:Option<f64> = if y != 0.0 { Some(x/y) } else { None };

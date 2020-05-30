@@ -11,7 +11,7 @@
 // 11. Use attribute:ignore before function to ignore the test case.
 #![allow(dead_code)]
 
-pub fn tt1() {
+pub fn run() {
   println!("tt1");
 }
 

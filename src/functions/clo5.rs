@@ -25,7 +25,7 @@ impl Iterator for Counter {
   }
 }
 
-pub fn clo5() {
+pub fn run() {
   // case 1(use next() to loop)
   for c in Counter::new() {
     println!("item in counter is {}", c);

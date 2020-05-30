@@ -19,7 +19,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 use List::{Cons, Nil};
 
-pub fn rc5() {
+pub fn run() {
   let a = Rc::new(Cons(5, RefCell::new(Rc::new(Nil))));
 
   println!("a initial rc count = {}", Rc::strong_count(&a));

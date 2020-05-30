@@ -5,7 +5,7 @@
 // 5. Expected failures => return Result; Unexpected failures => panic!
 // 6. When the input contract(interface) is invalid => panic!
 
-pub fn err3() {
+pub fn run() {
   let normal_guess = Guess::new(20);
   println!("normal guess is {}", normal_guess.value());
 

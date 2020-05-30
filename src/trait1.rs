@@ -70,7 +70,7 @@ fn returns_summarizable() -> impl Summary + Debug {
   }
 }
 
-pub fn trait1() {
+pub fn run() {
   // case 1(define method interfaces in "trait" block and implement method body in types)
   let tweet = Tweet {
     username: String::from("horse_ebooks"),

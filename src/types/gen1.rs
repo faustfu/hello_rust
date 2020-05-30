@@ -1,6 +1,6 @@
 // 1. Generic types <-> Concrete types.
 
-pub fn gen1() {
+pub fn run() {
   // case 1(raw)
   let number_list = vec![34, 50, 25, 100, 65];
 

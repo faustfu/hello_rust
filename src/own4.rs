@@ -19,7 +19,7 @@ impl<'a> Drop for Foo<'a> {
     }
 }
   
-pub fn own4() {
+pub fn run() {
     let mut x = 4;                    // -+ x goes into scope
                               //  |
     {                         //  |

@@ -4,7 +4,7 @@
 
 use std::collections::HashMap;
 
-pub fn map1() {
+pub fn run() {
   // case 1(init)
   let mut scores = HashMap::new(); // initial an empty map without type definition.
 

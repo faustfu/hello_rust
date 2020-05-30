@@ -47,6 +47,6 @@ mod tests {
   }
 }
 
-pub fn clo4() {
+pub fn run() {
   println!("clo4");
 }

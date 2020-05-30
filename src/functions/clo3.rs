@@ -58,7 +58,7 @@ fn generate_workout(intensity: u32, random_number: u32) {
   }
 }
 
-pub fn clo3() {
+pub fn run() {
   let simulated_user_specified_value = 10;
   let simulated_random_number = 7;
 

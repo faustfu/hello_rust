@@ -3,7 +3,7 @@ extern crate rand;
 use rand::Rng;
 
 const TWO_PI: f64 = std::f64::consts::PI * 2.0;
-pub fn sine_mouse_wave() {
+pub fn run() {
     let screen_size = autopilot::screen::size();
     let scoped_height = screen_size.height / 2.0 - 10.0; // Stay in screen bounds.
     let mut rng = rand::thread_rng();

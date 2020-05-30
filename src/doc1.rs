@@ -5,6 +5,6 @@
 /// ```rust
 /// println!("Hello, world!");
 /// ```
-pub fn doc1() {
+pub fn run() {
   println!("doc111");
 }

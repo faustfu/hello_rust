@@ -34,7 +34,7 @@ impl<T, U> Point2<T, U> {
   }
 }
 
-pub fn gen2() {
+pub fn run() {
   // case 1(use a generic type in structs)
   let integer = Point1 { x: 5, y: 10 };
   let float = Point1 { x: 1.0, y: 4.0 };

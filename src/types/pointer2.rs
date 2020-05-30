@@ -28,7 +28,7 @@ fn hello(name: &str) {
   println!("Hello, {}!", name);
 }
 
-pub fn pointer2() {
+pub fn run() {
   // case 1(normal reference)
   let a = &5;
   let b = &5;

@@ -12,7 +12,7 @@ impl Drop for CustomSmartPointer {
   }
 }
 
-pub fn pointer3() {
+pub fn run() {
   // case 1
   let _c = CustomSmartPointer {
     data: String::from("my stuff"),

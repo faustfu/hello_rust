@@ -1,7 +1,7 @@
 // 1. Use cfg:test to bypass compile the module as building.
 #![allow(dead_code)]
 
-pub fn tt2() {
+pub fn run() {
     println!("tt2");
 }
 

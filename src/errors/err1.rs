@@ -8,7 +8,7 @@
 use std::fs::File;
 use std::io::ErrorKind;
 
-pub fn err1() {
+pub fn run() {
   // // case 1(call macro:panic directly)
   // panic!("Huh?");
 

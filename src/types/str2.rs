@@ -1,6 +1,6 @@
 use rand::prelude::*;
 
-pub fn str2() {
+pub fn run() {
   let s1 = b"abc"; // convert a str to be a byte slice.
 
   for i in s1.iter() {

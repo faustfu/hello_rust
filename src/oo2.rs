@@ -49,7 +49,7 @@ impl Draw for SelectBox {
   }
 }
 
-pub fn oo2() {
+pub fn run() {
   let screen = Screen {
     components: vec![
       Box::new(SelectBox {

@@ -8,7 +8,7 @@
 //    b. to get elements in a string by bytes: <name>.bytes()
 //    c. to get elements in a string by chars: <name>.chars()
 
-pub fn str1() {
+pub fn run() {
   let s1: &'static str = "123"; //static str is inline readonly text
   let s2: &str = "456"; //&str = string slice
   let s3 = "789"; // same as s2. Default type is &str

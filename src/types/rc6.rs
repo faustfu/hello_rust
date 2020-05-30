@@ -11,7 +11,7 @@ struct Node {
   children: RefCell<Vec<Rc<Node>>>,
 }
 
-pub fn rc6() {
+pub fn run() {
   // case 1
   let leaf = Rc::new(Node {
     value: 3,

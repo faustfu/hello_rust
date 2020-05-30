@@ -39,7 +39,7 @@ impl AveragedCollection {
     self.average = total as f64 / (self.list.len() + 1) as f64;
   }
 }
-pub fn oo1() {
+pub fn run() {
   let mut a = AveragedCollection::new();
   a.add(1);
   println!("average collection is {:?}", a);

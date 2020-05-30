@@ -81,7 +81,7 @@ impl Post {
   }
 }
 
-pub fn oo3() {
+pub fn run() {
   let mut post = Post::new();
 
   post.add_text("I ate a salad for lunch today");

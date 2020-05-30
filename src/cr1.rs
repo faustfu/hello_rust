@@ -1,6 +1,6 @@
 use rand::prelude::*;
 
-pub fn cr1() {
+pub fn run() {
   let mut rng = rand::thread_rng();
   let x:f64 = rng.gen();
 

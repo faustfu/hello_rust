@@ -61,7 +61,7 @@ impl Messenger for MockMessenger {
   }
 }
 
-pub fn rc3() {
+pub fn run() {
   let m = MockMessenger::new();
   let mut tracker = LimitTracker::new(&m, 100);
   tracker.set_value(90);

@@ -7,7 +7,7 @@ pub trait Iterator {
 }
 */
 
-pub fn it1() {
+pub fn run() {
   // case 1
   let a = [1, 2, 3].iter();
   let b = [1, 2, 3].iter();

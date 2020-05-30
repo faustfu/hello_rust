@@ -27,7 +27,7 @@ fn get_stack_size<T>(value: &T) -> usize {
     mem::size_of_val(value)
 }
 
-pub fn pointer1() {
+pub fn run() {
     // case 1(normal Box)
     let a = Box::new(5);
     println!("a = {}", a); // Box implements Deref trait to be able to be unboxed automically

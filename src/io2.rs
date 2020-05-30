@@ -3,7 +3,7 @@ use std::process;
 
 use hello_world;
 
-pub fn io2() {
+pub fn run() {
   let args: Vec<String> = env::args().collect();
 
   let config = hello_world::Config::new(&args).unwrap_or_else(|err| {

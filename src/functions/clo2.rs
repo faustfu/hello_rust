@@ -6,7 +6,7 @@
 use std::thread;
 use std::time::Duration;
 
-pub fn clo2() {
+pub fn run() {
   let simulated_user_specified_value = 10;
   let simulated_random_number = 7;
 

@@ -28,7 +28,7 @@ const STRATOSPHERE_MAX: u64 = 99999;
 const MESOSPHERE_MIN: u64 = 100000;
 const MESOSPHERE_MAX: u64 = 999999;
 
-pub fn pat1() {
+pub fn run() {
   // case 1(if let)
   let person = Person {
     car: Some(true),

@@ -24,7 +24,7 @@ fn uses_foobar(foobar: Foobar) {
   println!("I consumed a Foobar: {:?}", foobar);
 }
 
-pub fn own1() {
+pub fn run() {
   let x = Foobar(1);
   uses_foobar(x); //value is moved/transfered here
   // uses_foobar(x); //the statement is invalid, because the value is used here after move

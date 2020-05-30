@@ -11,7 +11,7 @@ fn bar(b:Foobar) {
   println!("b is {}", b.0);
 }
 
-pub fn own2() {
+pub fn run() {
   let a = foo(1);
 
   let b = &a; //1. borrow of `a` occurs here

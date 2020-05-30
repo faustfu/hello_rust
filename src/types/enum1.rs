@@ -28,7 +28,7 @@ impl IpAddr {
   }
 }
 
-pub fn enums() {
+pub fn run() {
   // let c:Color = Color::RgbColor(0,0,0);
   let c: Color = Color::Cmyk {
     cyan: 1,

@@ -39,7 +39,7 @@ fn tu1() -> (i32, i32) {
   (1,2)
 }
 
-pub fn fn1() {
+pub fn run() {
   let mut map = HashMap::new();
 
   for n in 1..40 {

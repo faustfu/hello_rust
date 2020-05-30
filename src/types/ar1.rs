@@ -2,7 +2,7 @@
 // array use "usize" as index type
 // the length of array is fixed.
 // array index starts from 0.
-pub fn ar1() {
+pub fn run() {
   let mut x:[i32;5] = [1,2,3,4,2]; 
 
   x[1] = 3;

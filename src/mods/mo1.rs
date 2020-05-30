@@ -35,7 +35,7 @@ mod hello {
   }
 }
 
-pub fn mo1() {
+pub fn run() {
   let mut a = LinkedList::new(); // use the shortcut
   a.push_back(1);
   a.push_back(2);

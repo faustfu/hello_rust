@@ -10,7 +10,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 use List::{Cons, Nil};
 
-pub fn rc4() {
+pub fn run() {
   let value = Rc::new(RefCell::new(5));
 
   let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));

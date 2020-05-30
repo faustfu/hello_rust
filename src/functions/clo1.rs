@@ -21,7 +21,7 @@ fn inc(i:i32) -> i32 {
   i + 1
 }
 
-pub fn clo1() {
+pub fn run() {
   // case 1(copy)
   let i:i32 = inc(1);
 

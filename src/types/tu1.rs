@@ -6,7 +6,7 @@
 
 type Pair<'a> = (i32, &'a str);
 
-pub fn tu1() {
+pub fn run() {
   let p: Pair<'static> = (10, "ten");
   let (a, b) = p;
 

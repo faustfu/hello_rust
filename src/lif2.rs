@@ -12,7 +12,7 @@ impl<'a> ImportantExcerpt<'a> {
   }
 }
 
-pub fn case1() {
+pub fn run() {
   // case 1
   let novel = String::from("Call me Ishmael. Some years ago...");
   let first_sentence = novel.split('.').next().expect("Could not find a '.'");

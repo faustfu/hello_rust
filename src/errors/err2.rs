@@ -6,7 +6,7 @@ use std::io;
 use std::io::Read;
 use std::fs::File;
 
-pub fn err2() {
+pub fn run() {
   
   //case 1(combine match and Result)
   match read_username_from_file1() {

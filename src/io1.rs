@@ -31,7 +31,7 @@ fn handle_guess(guess: u8, correct: u8) -> bool {
   }
 }
 
-pub fn io1() {
+pub fn run() {
   let rng: u8 = random();
 
   loop {

@@ -8,7 +8,7 @@ fn foo(a:u8) -> Foobar {
   Foobar(a)
 }
 
-pub fn own3() {
+pub fn run() {
   let mut a = foo(1);
 
   let b = &mut a; // mutable borrow(b) occurs here and continues until the block is ended.
