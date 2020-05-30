@@ -85,7 +85,21 @@ fn main() {
 
     // types::pointer1::pointer1();
 
-    types::pointer2::pointer2();
+    // types::pointer2::pointer2();
+
+    // types::pointer3::pointer3();
+
+    // types::rc1::rc1();
+
+    // types::rc2::rc2();
+
+    // types::rc3::rc3();
+
+    // types::rc4::rc4();
+
+    // types::rc5::rc5();
+
+    // types::rc6::rc6();
 
     // types::sh::heap();
 
@@ -155,7 +169,7 @@ fn main() {
 
     // variables::var1::var1();
 
-    // concurrencies::th1::th1();
+    concurrencies::th1::th1();
 
     // concurrencies::th2::th2();
 
