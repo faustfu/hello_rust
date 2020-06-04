@@ -21,5 +21,7 @@ pub mod sl1;
 pub mod str1;
 pub mod str2;
 pub mod trait1;
+pub mod trait2;
+pub mod trait3;
 pub mod tu1;
 pub mod vec1;

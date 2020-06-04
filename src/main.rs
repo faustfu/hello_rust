@@ -111,7 +111,7 @@ async fn main() {
 
     // types::re1::run();
 
-    types::req1::run().await;
+    // types::req1::run().await;
 
     // types::sh::run();
 
@@ -122,6 +122,10 @@ async fn main() {
     // types::str2::run();
 
     // types::trait1::run();
+
+    // types::trait2::run();
+
+    types::trait3::run();
 
     // types::tu1::run();
 
