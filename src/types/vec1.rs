@@ -52,8 +52,14 @@ pub fn run() {
   a.extend([1, 2, 3].iter().cloned());
   println!("a is {:?}", a);
 
+  // read by loop
   for i in a.iter() {
     println!("{}", i);
+  }
+
+  // write by loop
+  for i in a.iter_mut() {
+    *i += 1;
   }
 
   a.pop(); //pop() will return Option

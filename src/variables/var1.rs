@@ -41,4 +41,8 @@ pub fn run() {
   p_bool(b);
   p_char(c);
   p_int(add(1, 2));
+
+  // use destructor to assign multiple variables.
+  let (my_name,my_age)=("Bob", 3);
+  println!("{name} is {age} years old.", name = my_name, age = my_age);
 }

@@ -1,6 +1,10 @@
 #![allow(dead_code)]
 
 extern crate autopilot;
+extern crate regex;
+extern crate reqwest;
+extern crate tokio;
+
 // use std::mem;
 
 /// 1. "fn main()" in src/main.rs(library crate) or src/lib.rs(binary crate) is a default entry point/crate root of the project.
@@ -9,6 +13,7 @@ extern crate autopilot;
 /// 4. macro is a kind of pseudo code for compiler to generate some code at compile time.
 /// 5. ";" indicate the end of a statement. Every statements need a semicolon if it is not a final return statement in a block;
 
+mod cores;
 mod functions;
 mod types;
 mod concurrencies;
@@ -31,13 +36,14 @@ mod own1;
 mod own2;
 mod own3;
 mod own4;
+mod print;
 // mod auto1;
-// mod trait1;
 // mod tt1;
 // mod tt2;
 
 //entry point, no parameters nor return values.
-fn main() {
+#[tokio::main]
+async fn main() {
     // autopilot::key::type_string("Hello, world!", &[], 200., 0.);
     // let _ = autopilot::alert::alert("Hello, world!", None, None, None);
     // auto1::run();
@@ -48,6 +54,10 @@ fn main() {
     // println!("Hello, world!");
     // println!("a = {}, size of a = {}", a, mem::size_of_val(&a));
     // println!("b = {}, size of b = {}", b, mem::size_of_val(&b));
+
+    // cores::file1::run();
+
+    // cores::file2::run();
 
     // errors::err1::run();
 
@@ -99,6 +109,10 @@ fn main() {
 
     // types::rc6::run();
 
+    // types::re1::run();
+
+    types::req1::run().await;
+
     // types::sh::run();
 
     // types::sl1::run();
@@ -106,6 +120,8 @@ fn main() {
     // types::str1::run();
 
     // types::str2::run();
+
+    // types::trait1::run();
 
     // types::tu1::run();
 
@@ -163,11 +179,13 @@ fn main() {
 
     // own4::run();
 
+    // print::run();
+
     // variables::const1::run();
 
     // variables::var1::run();
 
-    concurrencies::async1::run();
+    // concurrencies::async1::run();
 
     // concurrencies::th1::run();
 
@@ -178,8 +196,6 @@ fn main() {
     // concurrencies::th4::run();
 
     // concurrencies::th5::run();
-
-    // trait1::run();
 
     // tt1::run();
 
