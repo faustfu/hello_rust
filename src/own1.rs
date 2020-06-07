@@ -1,4 +1,3 @@
-#[derive(Debug)]
 // Ownership is a way of using stack to replace garbage collection or record count to manage allocated memory space.
 
 // Ownership starts off with the following rules:
@@ -12,6 +11,7 @@
 // 8. If the ownership is transfered. New owner could decide the value's mutation state.
 // 9. A value could be clone(unknown size in heap)/copy(known size in stack) to avoid ownership transfering(move) issue. But it has cost.
 
+#[derive(Debug)]
 struct Foobar(i32);
 
 impl Drop for Foobar {

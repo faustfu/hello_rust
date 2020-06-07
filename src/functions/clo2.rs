@@ -1,4 +1,4 @@
-// 1. closures are anonymous functions you can save in a variable or pass as arguments to other functions.
+// 1. Closures are anonymous functions you can save in a variable or pass as arguments to other functions.
 // 2. Closures can capture values from the scope in which they’re defined.
 // 3. Closures are used for the cases which want to seperate executions from initial processes.
 // 4. Type annotations are optional for closures if compiler could inferer types from their usage.

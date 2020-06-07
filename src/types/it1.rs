@@ -7,6 +7,8 @@ pub trait Iterator {
 }
 */
 
+use std::collections::HashMap;
+
 pub fn run() {
   // case 1
   let a = [1, 2, 3].iter();
@@ -53,6 +55,28 @@ pub fn run() {
   let v6_vec: Vec<_> = g.iter().map(|x| x + 1).collect();
 
   assert_eq!(v6_vec, vec![2, 3, 4]);
+
+  // case 7(map+filter+for_each)
+  let v7_vec = vec![1, 2, 3];
+  v7_vec
+    .iter()
+    .map(|x| x + 1)
+    .filter(|x| x > &2)
+    .for_each(|x| println!("gogo {}", x));
+
+  // case 8(chain+enumerate)
+  // chain two iterators and show final pairs
+  let v8_vec = vec![1, 2, 3];
+  for (i, v) in v8_vec.iter().chain(Some(42).iter()).enumerate() {
+    println!("{}: {}", i, v);
+  }
+
+  // case 9(collect)
+  let v9_vec = vec![1, 2, 3];
+  let v9_vec_2: Vec<_> = v9_vec.iter().map(|x| x * 2).collect();
+  println!("collected vec is {:?}", v9_vec_2);
+  let v9_map: HashMap<_, _> = v9_vec.iter().map(|x| x * 3).enumerate().collect();
+  println!("mapped vec is {:?}", v9_map);
 }
 
 #[test]

@@ -11,7 +11,7 @@
 // 6. Closures will preferentially capture by immutable reference, then by mutable reference, and only then by value.
 // 7. To solve lifetime issues, we can force a closure to capture by value with the move keyword.
 // 8. Regarding the traits of closures:
-//    a. If a closure uses anything by value, then the closure is a FnOnce.
+//    a. If a closure uses anything by value(move), then the closure is a FnOnce.
 //    b. Otherwise, if a closure uses anything by mutable reference, then the closure is a FnMut,
 //        which automatically implies FnOnce as well.
 //    c. Otherwise, a closure is a Fn, which automatically implies both FnMut and FnOnce.
