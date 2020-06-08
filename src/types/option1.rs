@@ -3,7 +3,9 @@
 //     Some(T),
 //     None,
 // }
-// 2. Choosing between match and if let depends on what you’re doing in your particular situation and
+// 2. Use method:unwrap to parse a Some result or panic the system.
+// 3. Use question mark operator to parse a Some result or return None.
+// 4. Choosing between match and if let depends on what you’re doing in your particular situation and
 //     whether gaining conciseness is an appropriate trade-off for losing exhaustive checking.
 /* map signature
 impl Option<T>{

@@ -3,6 +3,8 @@
 //     Ok(T),
 //     Err(E),
 // }
+// 2. Use method:unwrap to parse a Ok result or panic the system.
+// 3. Use question mark operator to parse a Ok result or return error.
 
 pub fn run() {
   let i = -2;

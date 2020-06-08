@@ -83,6 +83,8 @@ async fn main() {
 
     // types::it1::run();
 
+    types::it2::run();
+
     // types::gen1::run();
 
     // types::gen2::run();
@@ -133,7 +135,7 @@ async fn main() {
 
     // types::trait5::run();
 
-    types::trait6::run();
+    // types::trait6::run();
 
     // types::tu1::run();
 
