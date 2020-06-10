@@ -4,6 +4,7 @@ extern crate autopilot;
 extern crate regex;
 extern crate reqwest;
 extern crate tokio;
+extern crate hello_proc_macro;
 
 // use std::mem;
 
@@ -73,6 +74,12 @@ async fn main() {
 
     // flows::loop1::for1();
 
+    // flows::macro1::run();
+
+    // flows::macro2::run();
+
+    flows::macro3::run();
+
     // flows::match1::run();
 
     // flows::pat1::run();
@@ -83,7 +90,7 @@ async fn main() {
 
     // types::it1::run();
 
-    types::it2::run();
+    // types::it2::run();
 
     // types::gen1::run();
 

@@ -1,11 +1,12 @@
 // 1. trait:IntoIterator is not an iterator, but it could be converted to be an iterator by calling the method:into_iter.
 
-fn flatten<I>(iter: I) -> Flatten<I>
+// take a list which item type is "list" and generate a flatten iterator.
+fn flatten<I>(iter: I) -> Flatten<I::IntoIter> // associated type:IntoIter
 where
-  I: Iterator,
+  I: IntoIterator,
   I::Item: IntoIterator,
 {
-  Flatten::new(iter)
+  Flatten::new(iter.into_iter()) // save converted iterator
 }
 
 struct Flatten<O>
@@ -13,8 +14,8 @@ where
   O: Iterator,
   O::Item: IntoIterator,
 {
-  outer: O,                                           // keep thr first layer
-  inner: Option<<O::Item as IntoIterator>::IntoIter>, // keep current iterator in the second layer
+  outer: O,                                           // save converted iterator
+  inner: Option<<O::Item as IntoIterator>::IntoIter>, // keep current iterator of the second layer
 }
 
 impl<O> Flatten<O>
@@ -25,7 +26,7 @@ where
   fn new(iter: O) -> Self {
     Flatten {
       outer: iter,
-      inner: None,
+      inner: None, // use None as initial status
     }
   }
 }
@@ -43,9 +44,8 @@ where
         if let Some(item) = inner_iter.into_iter().next() {
           return Some(item); // normal return
         }
-        self.inner = None; // second layer iterator is end, try to get next iterator
       }
-
+      // second layer iterator is end, try to get next iterator
       let next_inner_iter = self.outer.next()?.into_iter(); // return None if first layer iterator is end
       self.inner = Some(next_inner_iter);
     }
@@ -77,6 +77,6 @@ mod test {
 
   #[test]
   fn two_wide() {
-    assert_eq!(flatten(vec![vec!["a"], vec!["k"]].into_iter()).count(), 2);
+    assert_eq!(flatten(vec![vec!["a"], vec!["k"]]).count(), 2);
   }
 }
