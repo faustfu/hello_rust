@@ -1,4 +1,4 @@
-// 1. Use a wrapper struct(newtype) to bypass the orphan rule.
+// 1. Use a wrapper struct(newtype) to bypass the orphan rule and implement new methods for the type.
 // 2. The inner type has to be accessed indirectly, or implement trait:Deref to expose it.
 
 use std::fmt;

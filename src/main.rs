@@ -78,7 +78,7 @@ async fn main() {
 
     // flows::macro2::run();
 
-    flows::macro3::run();
+    // flows::macro3::run();
 
     // flows::match1::run();
 
@@ -87,6 +87,8 @@ async fn main() {
     // types::ar1::run();
 
     // types::enum1::run();
+
+    // types::int1::run();
 
     // types::it1::run();
 
@@ -128,9 +130,11 @@ async fn main() {
 
     // types::sl1::run();
 
-    // types::str1::run();
+    types::str1::run();
 
     // types::str2::run();
+
+    // types::str3::run();
 
     // types::trait1::run();
 

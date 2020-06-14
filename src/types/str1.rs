@@ -7,6 +7,11 @@
 //    a. to get a string slice(&str), and it will panic if the range index is not valid nor a char boundary: &<name>[<range>]
 //    b. to get elements in a string by bytes: <name>.bytes()
 //    c. to get elements in a string by chars: <name>.chars()
+// 4. str ~= [char] in stack/heap/static
+//    &str ~= &[char]
+//    String ~= Vec<char> in heap
+//    String -> &str (cheap)(by AsRef)
+//    &str -> String (expensive)(by Clone)
 
 pub fn run() {
   let s1: &'static str = "123"; //static str is inline readonly text
@@ -58,4 +63,11 @@ pub fn run() {
   a2 = "wo"; // assign a new str reference
   println!("a1 is {}", a1);
   println!("a2 is {}", a2);
+
+  // declare a multi-line string
+  let matrix = r"1234
+5678
+9012
+3456";
+  println!("matrix is \n{}", matrix);
 }

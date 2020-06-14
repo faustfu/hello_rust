@@ -1,6 +1,6 @@
 // 1. The type HashMap<K, V> stores a mapping of keys of type K to values of type V.
 // 2. If types of key or value are stored in heap, the map will take the ownership.
-// 3. If types of key or value are references, the lifetime of key or value should be loger then the map.
+// 3. If types of key or value are references, the lifetime of key or value should be longer then the map.
 
 use std::collections::HashMap;
 

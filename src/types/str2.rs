@@ -1,3 +1,4 @@
+// 1. str use utf8 to encode/decode.
 use rand::prelude::*;
 
 pub fn run() {
@@ -15,4 +16,8 @@ pub fn run() {
   for i in 1..10 {
     if rand::random() { println!("{} is true", i)}
   }
+
+  println!("byte length of 一二三 is {}", "一二三".len());
+
+  println!("length of 一 is {}", '一'.len_utf8());
 }
