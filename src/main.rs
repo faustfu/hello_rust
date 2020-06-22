@@ -24,6 +24,7 @@ mod flows;
 mod mods;
 mod lif1;
 mod lif2;
+mod lif3;
 // mod mo1;
 // mod io1;
 // mod io2;
@@ -84,6 +85,8 @@ async fn main() {
 
     // flows::pat1::run();
 
+    // flows::pat2::run();
+
     // types::ar1::run();
 
     // types::enum1::run();
@@ -130,7 +133,7 @@ async fn main() {
 
     // types::sl1::run();
 
-    types::str1::run();
+    // types::str1::run();
 
     // types::str2::run();
 
@@ -150,7 +153,7 @@ async fn main() {
 
     // types::tu1::run();
 
-    // types::vec1::run();
+    // types::sets::vec1::run();
 
     // lif1::lif1();
 
@@ -163,6 +166,8 @@ async fn main() {
     // lif1::lif5();
 
     // lif2::run();
+
+    // lif3::run();
 
     // mods::mo1::run();
 
@@ -179,6 +184,8 @@ async fn main() {
     // functions::clo6::run();
 
     // functions::fn1::run();
+
+    functions::fn2::run();
 
     // io1::run();
 
@@ -207,6 +214,8 @@ async fn main() {
     // print::run();
 
     // variables::const1::run();
+
+    // variables::static1::run();
 
     // variables::var1::run();
 

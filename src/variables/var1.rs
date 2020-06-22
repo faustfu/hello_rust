@@ -12,23 +12,23 @@
 //     tuples: (<type 1>[,<type 2>]...), access syntax: <tuple name>.<index of the element, ex: 0,1,2...>, the elements of a tuple could be destructed to be seperated variables.
 // 5. cast: <var name> as <type name>
 
-fn p_str(a:&str) {
+fn p_str(a: &str) {
   println!("This is {}", a);
 }
 
-fn p_bool(a:bool) {
+fn p_bool(a: bool) {
   println!("This is {}", a);
 }
 
-fn p_char(a:char) {
+fn p_char(a: char) {
   println!("This is {}", a);
 }
 
-fn p_int(a:i32) {
+fn p_int(a: i32) {
   println!("This is {}", a);
 }
 
-pub fn add(a:i32,b:i32) -> i32 {
+pub fn add(a: i32, b: i32) -> i32 {
   return a + b;
 }
 
@@ -43,6 +43,6 @@ pub fn run() {
   p_int(add(1, 2));
 
   // use destructor to assign multiple variables.
-  let (my_name,my_age)=("Bob", 3);
+  let (my_name, my_age) = ("Bob", 3);
   println!("{name} is {age} years old.", name = my_name, age = my_age);
 }

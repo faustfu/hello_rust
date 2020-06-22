@@ -40,7 +40,7 @@ pub fn run() {
   // All three conditions have to be passed to run inner block statements.
   if let Person {
     car: Some(_),
-    age: person_age @ 13..=19, // Use "@" to bind variables for later usage.
+    age: person_age @ 13..=19, // Use "@" to bind variables for later usage in inner block.
     name: ref person_name, // Use "ref" to enforce binding a variable by reference.
     .. // Use wildcard ".." to ignore other properties.
   } = person
@@ -85,7 +85,7 @@ pub fn run() {
   }
 
   // case 5(identifier patterns)
-  let mut variable = 10; // Bind/declare a variable with the value.
+  let mut variable = 10; // use let to bind/declare a variable with the value.
   variable += 5;
   println!("New variable is {}", variable);
 
@@ -182,16 +182,16 @@ pub fn run() {
   // case 8(reference pattern)
   let int_reference = &0;
 
-  let a = match *int_reference {
+  let a = match *int_reference { // use pointer with reference
     0 => "zero",
     _ => "some",
   };
-  let b = match int_reference {
+  let b = match int_reference { // use reference pattern directly
     &0 => "zero",
     _ => "some",
   };
   let c = match int_reference {
-    0 => "zero", // Rust could unbox the reference value automatically.
+    0 => "zero", // Rust could detect and try to unbox the reference value automatically.
     _ => "some",
   };
   println!("a is {}, b is {}, c is {}", a, b, c);

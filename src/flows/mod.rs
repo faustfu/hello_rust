@@ -6,3 +6,4 @@ pub mod macro2;
 pub mod macro3;
 pub mod match1;
 pub mod pat1;
+pub mod pat2;

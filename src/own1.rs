@@ -25,6 +25,7 @@ fn uses_foobar(foobar: Foobar) {
 }
 
 pub fn run() {
+  // case 1
   let x = Foobar(1);
   uses_foobar(x); //value is moved/transfered here
   // uses_foobar(x); //the statement is invalid, because the value is used here after move
@@ -38,4 +39,11 @@ pub fn run() {
   } //end of _y
   println!("After x");
   //end of _x
+
+  // case 2
+  let v = Foobar(1);
+  {
+    v // v is moved to the inner scope by force.
+  };
+  // uses_foobar(v); // v is dropped in inner scope and cannot be accessed again.
 }

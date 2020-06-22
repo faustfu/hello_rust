@@ -5,3 +5,4 @@ pub mod clo4;
 pub mod clo5;
 pub mod clo6;
 pub mod fn1;
+pub mod fn2;
