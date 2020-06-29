@@ -183,9 +183,13 @@ async fn main() {
 
     // functions::clo6::run();
 
+    // functions::clo7::run();
+
+    functions::clo8::run();
+
     // functions::fn1::run();
 
-    functions::fn2::run();
+    // functions::fn2::run();
 
     // io1::run();
 
