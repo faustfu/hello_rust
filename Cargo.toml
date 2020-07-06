@@ -13,3 +13,5 @@ regex = "1.3.9"
 reqwest = "0.10.6"
 tokio = { version = "0.2", features = ["full"] }
 hello_proc_macro = { path = "../hello_proc_macro" }
+failure = "0.1.8"
+failure_derive = "0.1.8"

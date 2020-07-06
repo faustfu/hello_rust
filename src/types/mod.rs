@@ -5,6 +5,8 @@ pub mod gen2;
 pub mod int1;
 pub mod it1;
 pub mod it2;
+pub mod it3;
+pub mod it4;
 pub mod map1;
 pub mod option1;
 pub mod pointer1;

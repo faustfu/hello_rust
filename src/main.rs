@@ -1,10 +1,13 @@
-#![allow(dead_code)]
+#![allow(dead_code,unused_imports)]
 
 extern crate autopilot;
 extern crate regex;
 extern crate reqwest;
 extern crate tokio;
 extern crate hello_proc_macro;
+extern crate failure;
+#[macro_use] extern crate failure_derive;
+
 
 // use std::mem;
 
@@ -14,6 +17,7 @@ extern crate hello_proc_macro;
 /// 4. macro is a kind of pseudo code for compiler to generate some code at compile time.
 /// 5. ";" indicate the end of a statement. Every statements need a semicolon if it is not a final return statement in a block;
 
+mod apps;
 mod cores;
 mod functions;
 mod types;
@@ -28,7 +32,6 @@ mod lif3;
 // mod mo1;
 // mod io1;
 // mod io2;
-// mod cr1;
 // mod doc1;
 mod oo1;
 mod oo2;
@@ -38,6 +41,7 @@ mod own1;
 mod own2;
 mod own3;
 mod own4;
+mod patterns;
 mod print;
 // mod auto1;
 // mod tt1;
@@ -56,6 +60,12 @@ async fn main() {
     // println!("Hello, world!");
     // println!("a = {}, size of a = {}", a, mem::size_of_val(&a));
     // println!("b = {}, size of b = {}", b, mem::size_of_val(&b));
+
+    // apps::adt1::run();
+
+    // apps::cr1::run();
+
+    apps::fail1::run()
 
     // cores::file1::run();
 
@@ -87,6 +97,10 @@ async fn main() {
 
     // flows::pat2::run();
 
+    // patterns::builder1::run();
+
+    // patterns::builder2::run();
+
     // types::ar1::run();
 
     // types::enum1::run();
@@ -96,6 +110,10 @@ async fn main() {
     // types::it1::run();
 
     // types::it2::run();
+
+    // types::it3::run();
+
+    // types::it4::run();
 
     // types::gen1::run();
 
@@ -185,7 +203,7 @@ async fn main() {
 
     // functions::clo7::run();
 
-    functions::clo8::run();
+    // functions::clo8::run();
 
     // functions::fn1::run();
 
@@ -194,8 +212,6 @@ async fn main() {
     // io1::run();
 
     // io2::run();
-
-    // cr1::run();
 
     // doc1::run();
 
