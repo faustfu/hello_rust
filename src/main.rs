@@ -1,14 +1,5 @@
 #![allow(dead_code,unused_imports)]
 
-extern crate autopilot;
-extern crate regex;
-extern crate reqwest;
-extern crate tokio;
-extern crate hello_proc_macro;
-extern crate failure;
-#[macro_use] extern crate failure_derive;
-
-
 // use std::mem;
 
 /// 1. "fn main()" in src/main.rs(library crate) or src/lib.rs(binary crate) is a default entry point/crate root of the project.
@@ -63,9 +54,13 @@ async fn main() {
 
     // apps::adt1::run();
 
+    // apps::arg1::run();
+
     // apps::cr1::run();
 
-    apps::fail1::run()
+    // apps::fail1::run()
+
+    apps::pow1::run();
 
     // cores::file1::run();
 
@@ -239,17 +234,29 @@ async fn main() {
 
     // variables::var1::run();
 
+    // concurrencies::arc1::run();
+
+    // concurrencies::arc2::run();
+
     // concurrencies::async1::run();
+
+    // concurrencies::atom1::run();
+
+    // concurrencies::ba1::run();
+
+    // concurrencies::ch1::run();
+
+    // concurrencies::ch2::run();
+
+    // concurrencies::ch3::run();
+
+    // concurrencies::lock1::run();
+
+    // concurrencies::mu1::run();
 
     // concurrencies::th1::run();
 
     // concurrencies::th2::run();
-
-    // concurrencies::th3::run();
-
-    // concurrencies::th4::run();
-
-    // concurrencies::th5::run();
 
     // tt1::run();
 

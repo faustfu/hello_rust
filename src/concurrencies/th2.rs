@@ -1,18 +1,34 @@
-// 1. Threads use channels to communicate.
-// 2. "mpsc" stands for multiple producer, single consumer.
-// 3. Status of the channel has to be certain(no more input), then it could be closed.
+// 1. Default size of a spawned thread is 2MB. Use std::thread::Builder could customize spawned threads.
 
-use std::thread;
-use std::sync::mpsc;
+use std::panic;
+use std::thread::{current, Builder};
 
 pub fn run() {
-    let (tx, rx) = mpsc::channel(); // Create a simple streaming channel, tx is the channel's input, rx is the channel's output.
+  let mut v = vec![];
+  for id in 0..5 {
+    let thread_name = format!("child-{}", id);
+    let size: usize = 3 * 1024 * 1024;
+    let builder = Builder::new().name(thread_name).stack_size(size);
+    let child = builder
+      .spawn(move || {
+        let handler = current();
+        let name = handler.name().unwrap();
+        println!("in child: {}[{}]", name, id);
 
-    thread::spawn(move || {
-        let val = String::from("hi");
-        tx.send(val).unwrap(); // Send a value and get an operation result to check if it is failed.
-    });
+        match panic::catch_unwind(move || {
+          if id == 2 {
+            panic!("Failed({})", id);
+          }
+        }) {
+          Ok(_) => println!("{} done", name),
+          Err(_) => println!("do sth after failed in {}", name),
+        }
+      })
+      .unwrap();
+    v.push(child);
+  }
 
-    let received = rx.recv().unwrap(); // Block the thread to read from the channel.
-    println!("Got: {}", received);
+  for child in v {
+    child.join().unwrap();
+  }
 }

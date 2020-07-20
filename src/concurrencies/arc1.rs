@@ -1,4 +1,4 @@
-// 1. Use Atomic Reference Counting(arc) to pass values between threads.
+// 1. Use Atomic Reference Counting(arc) and Mutex to pass mutable values between threads.
 
 use std::sync::{Mutex, Arc};
 use std::thread;
@@ -10,7 +10,7 @@ pub fn run() {
     for _ in 0..10 {
         let counter = Arc::clone(&counter); // clone the counter for every handles.
         let handle = thread::spawn(move || {
-            let mut num = counter.lock().unwrap();
+            let mut num = counter.lock().unwrap(); // lock the mutex before accessing.
 
             *num += 1;
         });
@@ -21,5 +21,5 @@ pub fn run() {
         handle.join().unwrap(); // wait for every handles to do their jobs.
     }
 
-    println!("Result: {}", *counter.lock().unwrap());
+    println!("Result: {}", *counter.lock().unwrap()); // lock the mutex before accessing.
 }

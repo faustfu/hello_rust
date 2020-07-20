@@ -19,7 +19,7 @@ pub fn run() {
             tx1.send(val).unwrap();
             thread::sleep(Duration::from_secs(2));
         }
-    });
+    }); // tx1 is closed in the spawned thread.
 
     thread::spawn(move || {
         let vals = vec![
@@ -32,12 +32,10 @@ pub fn run() {
             tx.send(val).unwrap();
             thread::sleep(Duration::from_secs(1));
         }
-    });
+    }); // tx is closed in the spawned thread.
 
     for received in rx {
         // Use for loop to block the flow and receive values.
         println!("Got: {}", received);
     }
-
-    // The main thread will wait for rx is closed.
 }

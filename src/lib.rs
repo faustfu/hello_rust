@@ -1,3 +1,5 @@
+// 1. use lib.rs to export public interface of this crate.
+
 use std::error::Error;
 use std::fs;
 use std::env;
