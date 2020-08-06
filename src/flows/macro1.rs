@@ -17,16 +17,15 @@
 
 macro_rules! unless {
   // rule 1
-  ($arg:expr, $branch:expr) => (
+  ($arg:expr, $branch:expr) => {
     if !$arg {
       $branch
     }
-  );
-  // rule 2 ...
+  }; // rule 2 ...
 }
 
 fn cmp(a: i32, b: i32) {
-  unless!(a > b, { println!("{} < {}", a, b) })
+  unless!(a > b, println!("{} < {}", a, b));
 }
 pub fn run() {
   let (a, b) = (1, 2);

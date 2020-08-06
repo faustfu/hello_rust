@@ -60,7 +60,9 @@ async fn main() {
 
     // apps::fail1::run()
 
-    apps::pow1::run();
+    // apps::pow1::run();
+
+    apps::pow2::run();
 
     // cores::file1::run();
 

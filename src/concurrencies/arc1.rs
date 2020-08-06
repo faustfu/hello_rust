@@ -8,7 +8,7 @@ pub fn run() {
     let mut handles = vec![];
 
     for _ in 0..10 {
-        let counter = Arc::clone(&counter); // clone the counter for every handles.
+        let counter = Arc::clone(&counter); // clone the counter reference for every handles.
         let handle = thread::spawn(move || {
             let mut num = counter.lock().unwrap(); // lock the mutex before accessing.
 

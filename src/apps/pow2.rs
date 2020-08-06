@@ -1,11 +1,11 @@
-// 1. Use threads to do "Proof of Work".
+// 1. Use thread pools to do "Proof of Work".
 
 use crypto::digest::Digest;
 use crypto::sha2::Sha256;
 use itertools::Itertools;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::{mpsc, Arc};
-use std::thread;
+use threadpool::ThreadPool;
 
 const BASE: usize = 42;
 const THREADS: usize = 8;
@@ -17,7 +17,8 @@ pub fn run() {
     "PoW: find a number, SHA256(the number * {}) == \"{}...\" ",
     BASE, DIFFICULTY
   );
-  println!("Started {} threads", THREADS);
+  let pool = ThreadPool::new(num_cpus::get());
+  println!("Started pool...");
   println!("Please wait...");
 
   let is_found = Arc::new(AtomicBool::new(false));
@@ -26,7 +27,7 @@ pub fn run() {
   for i in 0..THREADS {
     let sender_n = sender.clone();
     let is_found = is_found.clone();
-    thread::spawn(move || {
+    pool.execute(move || {
       find(i, sender_n, is_found);
     });
   }
