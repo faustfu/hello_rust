@@ -62,7 +62,7 @@ async fn main() {
 
     // apps::pow1::run();
 
-    apps::pow2::run();
+    // apps::pow2::run();
 
     // cores::file1::run();
 
@@ -240,7 +240,7 @@ async fn main() {
 
     // concurrencies::arc2::run();
 
-    // concurrencies::async1::run();
+    concurrencies::async1::run();
 
     // concurrencies::atom1::run();
 
