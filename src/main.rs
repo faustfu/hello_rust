@@ -240,11 +240,13 @@ async fn main() {
 
     // concurrencies::arc2::run();
 
-    concurrencies::async1::run();
+    // concurrencies::async1::run();
 
     // concurrencies::atom1::run();
 
     // concurrencies::ba1::run();
+
+    concurrencies::ba2::run();
 
     // concurrencies::ch1::run();
 
@@ -259,6 +261,8 @@ async fn main() {
     // concurrencies::th1::run();
 
     // concurrencies::th2::run();
+
+    // concurrencies::th3::run();
 
     // tt1::run();
 
