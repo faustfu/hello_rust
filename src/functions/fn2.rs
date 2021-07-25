@@ -1,5 +1,5 @@
 // 1. Functions are first class citizen in Rust.
-// 2. A function could be transfered with "fn" and its signature.
+// 2. A function could be transferred with "fn" and its signature.
 // 3. Functions could not access context like closures.
 
 fn math(op: fn(i32, i32) -> i32, a: i32, b: i32) -> i32 {
@@ -14,11 +14,12 @@ fn product(a: i32, b: i32) -> i32 {
   a * b
 }
 
+// use fn to declare a type.
 type MathOp = fn(i32, i32) -> i32;
 fn calc(op: MathOp, a: i32, b: i32) -> i32 {
-  println!("{:p}", op);
   op(a, b)
 }
+
 fn process(op: &str) -> MathOp {
   fn sub(a: i32, b: i32) -> i32 {
     a - b

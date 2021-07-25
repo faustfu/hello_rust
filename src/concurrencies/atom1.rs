@@ -11,10 +11,10 @@ pub fn run() {
   let spinlock_clone = spinlock.clone();
 
   let thread = thread::spawn(move || {
-    spinlock_clone.store(0, Ordering::SeqCst); // access the value without locks.
+    spinlock_clone.store(0, Ordering::SeqCst); // Write the value without locks.
   });
 
-  while spinlock.load(Ordering::SeqCst) != 0 { // access the value without locks.
+  while spinlock.load(Ordering::SeqCst) != 0 { // Read the value without locks.
      // retry if the value is not equal to zero.
   }
 

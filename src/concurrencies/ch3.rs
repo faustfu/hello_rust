@@ -9,6 +9,8 @@ pub fn run() {
   tx.send(1).unwrap(); // send one object would not block the channel.
 
   thread::spawn(move || {
+    println!("in thread");
+
     tx.send(2).unwrap(); // send one object and block the channel.
   });
 

@@ -5,23 +5,25 @@ use std::thread::{current, Builder};
 
 pub fn run() {
   let mut v = vec![];
+
   for id in 0..5 {
     let thread_name = format!("child-{}", id);
     let size: usize = 3 * 1024 * 1024;
     let builder = Builder::new().name(thread_name).stack_size(size);
+
     let child = builder
       .spawn(move || {
-        let handler = current();
+        let handler = current(); // Get current thread handler.
         let name = handler.name().unwrap();
         println!("in child: {}[{}]", name, id);
 
-        match panic::catch_unwind(move || {
+        match panic::catch_unwind(move || { // Create a block to catch possible exceptions.
           if id == 2 {
             panic!("Failed({})", id);
           }
         }) {
           Ok(_) => println!("{} done", name),
-          Err(_) => println!("do sth after failed in {}", name),
+          Err(_) => println!("do sth after failed in {}", name), // Exception processes
         }
       })
       .unwrap();

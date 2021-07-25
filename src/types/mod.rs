@@ -26,6 +26,7 @@ pub mod sl1;
 pub mod str1;
 pub mod str2;
 pub mod str3;
+pub mod str4;
 pub mod trait1;
 pub mod trait2;
 pub mod trait3;

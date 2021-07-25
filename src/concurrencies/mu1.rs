@@ -1,4 +1,4 @@
-// 1. Rust could use mutex to manage data sharing.
+// 1. Rust could use mutex to manage data sharing between blocks.
 
 use std::sync::Mutex;
 

@@ -2,13 +2,13 @@
 // 2. The main aim of lifetimes is to prevent dangling references.(lifetime overlaps or is out of scope as accessing)
 // 3. A lifetime could be anonymous or named by starting with an apostrophe "'" combining a lexical label after the "&" of a reference.
 // 4. Function parameter lifetimes could be generic likes parameter types.
-// 5. The compiler uses three rules to figure out what lifetimes references have when there aren’t explicit annotations.
+// 5. The compiler uses three rules to figure out what lifetimes references have when there are no explicit annotations.
 //   a. Each parameter that is a reference gets its own lifetime parameter.
 //   b. If there is exactly one input lifetime parameter, that lifetime is assigned to all output lifetime parameters.
 //   c. If there are multiple input lifetime parameters, but one of them is &self or &mut self, the lifetime of self is assigned to all output lifetime parameters.
 //   d. If there are any lifetime unknown parameters after applying previous rules, the compiler will stop with an error.
-// 6. 'static means the lifetime is static and always accessable in the application.
-// 7. A lifetime could be replaced by a wider lifetime.
+// 6. 'static means the lifetime is static and always accessible in the application.
+// 7. A lifetime could be replaced by a wider lifetime to prevent possible invalid accesses.
 
 use std::fmt::Display;
 

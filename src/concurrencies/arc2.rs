@@ -10,14 +10,15 @@ pub fn run() {
   let total_flips = Arc::new(Mutex::new(0));
   let completed = Arc::new(Mutex::new(0));
 
-  for _ in 0..RUNS {
+  for _ in 0..RUNS { // Spawn threads to do parallel jobs.
     let total_flips = total_flips.clone();
     let completed = completed.clone();
 
     thread::spawn(move || {
       flip_sim(TARGET_FLIPS, total_flips);
+
       let mut completed = completed.lock().unwrap();
-      *completed += 1;
+      *completed += 1; // Use arc variables to disclose job status.
     });
   }
 
@@ -47,5 +48,5 @@ fn flip_sim(target_flips: u64, total_flips: Arc<Mutex<u64>>) {
   println!("iter_counts: {}", iter_counts);
 
   let mut total_flips = total_flips.lock().unwrap();
-  *total_flips += iter_counts;
+  *total_flips += iter_counts; // Use arc variables to aggregate job results.
 }

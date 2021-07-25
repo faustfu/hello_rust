@@ -9,12 +9,14 @@ type Pair<'a> = (i32, &'a str);
 pub fn run() {
   // normal tuple with lifetime
   let p: Pair<'static> = (10, "ten");
+  let q: Pair<'static> = (10, "ten");
   let (a, b) = p;
 
   assert_eq!(a, 10);
   assert_eq!(b, "ten");
   assert_eq!(p.0, 10);
   assert_eq!(p.1, "ten");
+  assert_eq!(p == q, true);
 
   // anonymous tuple
   let person:(&str, u8) = ("Bob", 3);
