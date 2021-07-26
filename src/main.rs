@@ -74,6 +74,8 @@ async fn main() {
 
     // errors::err3::run();
 
+    // errors::err4::run();
+
     // flows::cmp1::run();
 
     // flows::cmp2::run();
@@ -240,13 +242,15 @@ async fn main() {
 
     // concurrencies::arc2::run();
 
-    // concurrencies::async1::run();
+    concurrencies::async1::run();
+
+    // concurrencies::async2::run().await;
 
     // concurrencies::atom1::run();
 
     // concurrencies::ba1::run();
 
-    concurrencies::ba2::run();
+    // concurrencies::ba2::run();
 
     // concurrencies::ch1::run();
 

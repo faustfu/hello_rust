@@ -2,6 +2,7 @@
 // 2. Use "async" before a function/closure will create a generator of futures.(many results)
 // 3. A future instance has to be pulled by executor or "await".
 // 4. A future instance can only be executed one time.
+// 5. Use default futures::executor or tokio::executor by function modifier #[tokio::main] at main function to pull future results.
 
 use futures::{join, executor};
 
@@ -17,7 +18,9 @@ async fn my_async_1() {
     let f1 = my_async_1_1();
     let f2 = my_async_1_2();
 
-    join!(f1, f2); // Use macro:join to block and pull future results at the same time.
+    println!("Hello 3"); // 3 will be printed first, cause async blocks are waiting to be pulled.
+
+    join!(f2, f1); // Use macro:join to block and pull future results at the same time.
 }
 
 pub fn run() {
