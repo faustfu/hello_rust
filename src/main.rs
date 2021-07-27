@@ -242,9 +242,11 @@ async fn main() {
 
     // concurrencies::arc2::run();
 
-    concurrencies::async1::run();
+    // concurrencies::async1::run();
 
     // concurrencies::async2::run().await;
+
+    concurrencies::async3::run();
 
     // concurrencies::atom1::run();
 

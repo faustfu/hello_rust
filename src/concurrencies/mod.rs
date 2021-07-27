@@ -2,6 +2,7 @@ pub mod arc1;
 pub mod arc2;
 pub mod async1;
 pub mod async2;
+pub mod async3;
 pub mod atom1;
 pub mod ba1;
 pub mod ba2;
