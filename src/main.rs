@@ -20,6 +20,7 @@ mod mods;
 mod lif1;
 mod lif2;
 mod lif3;
+mod lif4;
 // mod mo1;
 // mod io1;
 // mod io2;
@@ -186,6 +187,8 @@ async fn main() {
 
     // lif3::run();
 
+    lif4::run();
+
     // mods::mo1::run();
 
     // functions::clo1::run();
@@ -242,7 +245,7 @@ async fn main() {
 
     // concurrencies::arc2::run();
 
-    concurrencies::async1::run();
+    // concurrencies::async1::run();
 
     // concurrencies::async2::run().await;
 
